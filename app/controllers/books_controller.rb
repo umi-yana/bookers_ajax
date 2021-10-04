@@ -19,6 +19,7 @@ def show
   @new_book = Book.new
   @book = Book.find(params[:id])
   @user = @book.user
+  @books = Book.all
 end
 
 def index

@@ -1,0 +1,14 @@
+
+
+<% if books.likes_by?(current_user) %>
+<!--# 過去にいいねしたかを確認する。-->
+    <%= link_to book_likes_path(books.id),method: :delete,remote: true do %>
+      ♥<%= books.likes.count %>いいね</td>
+       <% end %>
+    
+    <% else %>
+    
+     <%= link_to book_likes_path(books.id),method: :post,remote: true do %>
+     ♡<%= books.likes.count %>いいね</td>
+         <% end %>
+ <% end %>

@@ -15,8 +15,9 @@ Rails.application.routes.draw do
     get :followers
   end
   
-    resources :books
-    
+    resources :books do 
+      resource :likes,only:[:create, :destroy]
+    end
     
     get '/search' => 'searchs#search'
   
