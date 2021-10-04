@@ -5,6 +5,11 @@
  <% end %>
  <% end %>
  <p><%= flash[:notice] %></p>
+ 
+   <!--検索窓の作成-->
+  <% if user_signed_in? %>
+  <%= render 'searchs/search' %>
+    <% end %>
 
 
 <div class="container">  

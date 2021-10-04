@@ -20,6 +20,8 @@
                       
                       <!--#いいね機能実装部分-->
                       <td class="like_buttons_<%= @book.id %>"><%= render 'likes/like',books:@book %></td>
+                      
+                
     
     
                       <% if @book.user == current_user %>
@@ -32,6 +34,13 @@
                   </tr>
               </tbody>
           </table>
+          
+   
+          <div class ="comment_area">
+        <%= render 'comments/comment', book: @book, comment: @comment, comments: @comments %>
+        </div>
+
+
          </div>
          </div>
   </div>

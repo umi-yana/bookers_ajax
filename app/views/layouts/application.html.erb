@@ -37,10 +37,7 @@
     <%= content_tag :div, message, class: message_type %>
     <% end %>
     
-  <!--検索窓の作成-->
-  <% if user_signed_in? %>
-  <%= render 'searchs/search' %>
-    <% end %>
+
     <%= yield %>
     
     
