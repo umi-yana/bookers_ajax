@@ -66,7 +66,7 @@ end
 
 private
   def book_params
-    params.require(:book).permit(:title,:body,:profile_image)
+    params.require(:book).permit(:title,:body,:profile_image,:select_a,:select_b)
   end
 
 end

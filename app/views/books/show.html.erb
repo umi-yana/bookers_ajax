@@ -20,9 +20,36 @@
                       
                       <!--#いいね機能実装部分-->
                       <td class="like_buttons_<%= @book.id %>"><%= render 'likes/like',books:@book %></td>
-                      
-                
+
+
+<% if @book.selects_by?(current_user) %>
+<!--# 過去にいいねしたかを確認する。-->
+    <td><%= link_to book_selects_path(@book.id),method: :delete do %>
+      ♥<%= @book.select_a %></td>
+      <% end %>
+       <td><%= link_to book_selects_path(@book.id),method: :post do %>
+      ♡<%= @book.select_b %></td>
+       <% end %>
     
+    <% else %>
+        <td><%= link_to book_selects_path(@book.id),method: :delete do %>
+      ♡<%= @book.select_a %></td>
+      <% end %>
+       <td><%= link_to book_selects_path(@book.id),method: :post do %>
+      ♥<%= @book.select_b %></td>
+       <% end %>
+
+ <% end %>
+
+
+
+
+
+
+
+                      
+                      <td> <%#= link_to @book.select_a,root_path %> </td>
+                      <td> <%#= link_to @book.select_b,root_path %> </td>
     
                       <% if @book.user == current_user %>
                       <td><%= link_to "Edit",edit_book_path(@book),class:'btn btn-sm btn-success' %></td>
