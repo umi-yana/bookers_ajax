@@ -34,8 +34,6 @@ end
 
 
 # ーーー登録ユーザーのみ表示ーーー
-
-
   def edit
     @book = Book.find(params[:id])
     if @book.user == current_user
