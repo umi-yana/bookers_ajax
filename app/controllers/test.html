@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      span.class_1{
-        color:red
-      }
-      div.class_1{
-        font-weight:bold;
-      }
-      #id_1{
-        background-color: blue;
-      }
-      .class_2{
-        display: flex;
-  justify-content: center;
-      }
+<head>
+<script>
 
-    </style>
-  </head>
-  <body>
-    <span class="class_1">stringA</span>
-    <div class="class_1">stringB</div>
-    <span id="id_1">stringC</span>
-    <div class="class_2">stringD</div>
-  </body>
+function test(){
+  document.getElementsByName('name').value = "田中太郎";
+  document.querySelector(`input[type="radio"][name="sex"][value="0"]`).checked = true;
+  document.querySelector(`input[type="checkbox"][name="skill_a"]`).checked = true;
+  document.querySelector(`input[type="checkbox"][name="skill_c"]`).checked = true;
+  document.getElementsByTagName('send').click();
+
+
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</script>
+</head>
+<body>
+<form name="person" action="example.php" target="post">
+<input type="text" name="name"></input>
+<input type="radio" name="sex" value="0">male</input>
+<input type="radio" name="sex" value="1">female</input>
+<input type="checkbox" name="skill_a"></input>
+<input type="checkbox" name="skill_b"></input>
+<input type="checkbox" name="skill_c"></input>
+<input type="submit" value="send"></input>
+</form>
+<button onclick="test()">test</button>
+</body>
 </html>
+上記のようなformがあったとして、testボタンが押されたときに、
+(1):nameに「田中太郎」と入れる。
+(2):sexで「male」を選択
+(3):skill_a、skill_cをチェック
+(4):送信
+(1)〜(4)の動作を行うように、scriptタグ内に、コードを記述せよ
 
+後者のエンジニア両者
+　　フロントPHP
 
-: stringA を赤文字に
-(2): stringB を太文字に
-(3): stringC の背景色を青色に
-(4): stringD をセンタリング
+    lalabel
+      普段教育
+      フロント情報
+      
+      web　履歴書と職務経歴書
+      
